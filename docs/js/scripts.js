@@ -10441,12 +10441,33 @@ base('Cam').select({
     console.log(record.fields.Image[0].url);
     console.log(record.fields.Name);
     console.log(record.fields.Quote[0].url)
+        
+
+        
+        //template literal
+var template = ` <section class="ui card">
+            <div class="name"><h1>${record.fields.Name}</h1></div>
+            <div class="image">
+            <img src=" ${record.fields.Image[0].url} " alt="" value="PLAY"  onclick="play()></div>
+
+            <div class="sound"><audio controls src=" ${record.fields.Quote[0].url} ">hello</audio>
+            
+            </div>
+            
+         
+        </section>`
+
+function play(){
+       var audio = document.getElementById("audio");
+       audio.play();
+                 }
 
       // Display Data
-      
+      $('#students').append(template);
+     
 
     });
 });
 
-
+ 
 

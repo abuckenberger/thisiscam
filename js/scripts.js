@@ -29,7 +29,7 @@ base('Cam').select({
 
         
         //template literal
-var template = ` <section class="ui card">
+var template = ` <section class="ui fluid card">
             <div class="name"><h1>${record.fields.Name}</h1></div>
             <div class="image">
             <img src=" ${record.fields.Image[0].url} " alt="" value="PLAY"  onclick="play()></div>

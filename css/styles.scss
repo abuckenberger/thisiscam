@@ -2,5 +2,19 @@
 @import "semantic";
 
 body {
-    background: cornflowerblue;
+    background: #ffffff;
+    width:99%;
+    text-align: center;
+    display:block;
+}
+main {
+   display: flex;
+    justify-content: space-around;
+
+}
+
+article {
+    width:100%;
+    justify-content: space-around;
+    
 }

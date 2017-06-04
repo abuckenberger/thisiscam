@@ -14,7 +14,7 @@ console.log(base)
 
 // Get Records
 base('Cam').select({
-      maxRecords: 1,
+      maxRecords: 19,
     view: "Grid view"
 }).eachPage(function page(records, fetchNextPage) {
 
@@ -51,6 +51,10 @@ function play(){
 
     });
 });
+
+
+
+
 
 ////img section
 //<div class="image">

@@ -10430,10 +10430,9 @@ console.log(base)
 
 // Get Records
 base('Cam').select({
-    view: 'Grid view'
-}).firstPage(function(err, records) {
-    
-    if (err) { console.error(err); return; }
+      maxRecords: 1,
+    view: "Grid view"
+}).eachPage(function page(records, fetchNextPage) {
 
     records.forEach(function(record) {
        
@@ -10447,8 +10446,8 @@ base('Cam').select({
         //template literal
 var template = ` <section class="ui fluid card">
             <div class="name"><h1>${record.fields.Name}</h1></div>
-            <div class="image">
-            <img src=" ${record.fields.Image[0].url} " alt="" value="PLAY"  onclick="play()></div>
+            
+            
 
             <div class="sound"><audio controls src=" ${record.fields.Quote[0].url} ">hello</audio>
             
@@ -10469,5 +10468,7 @@ function play(){
     });
 });
 
- 
+////img section
+//<div class="image">
+//<img src=" ${record.fields.Image[0].url} " alt="" value="PLAY"  onclick="play()></div>
 
